@@ -1,0 +1,107 @@
+<section class="dashboard-summary">
+  <div class="dashboard-summary-header">
+    <div>
+      <p class="eyebrow">Dashboard stats</p>
+      <h1>Current totals</h1>
+      <p class="hero-copy">Live totals from the latest saved update and aggregate tracking metrics.</p>
+    </div>
+  </div>
+  <div class="hero-summary">
+    <div class="hero-summary-card">
+      <span>Games tracked</span>
+      <strong>$games_tracked</strong>
+    </div>
+    <div class="hero-summary-card">
+      <span>Players tracked</span>
+      <strong>$total_players</strong>
+    </div>
+    <div class="hero-summary-card">
+      <span>Organizations</span>
+      <strong>$orgs_tracked</strong>
+    </div>
+    <div class="hero-summary-card">
+      <span>Favorites</span>
+      <strong>$total_favourites</strong>
+    </div>
+    <div class="hero-summary-card">
+      <span>Collections</span>
+      <strong>$total_collections</strong>
+    </div>
+    <div class="hero-summary-card">
+      <span>Latest update</span>
+      <strong>$last_updated</strong>
+    </div>
+  </div>
+</section>
+
+<section class="dashboard-tabs">
+  <div class="tab-controls">
+    <button class="tab-button tab-active" type="button" data-tab="games-tab">Games</button>
+    <button class="tab-button" type="button" data-tab="orgs-tab">Orgs</button>
+  </div>
+</section>
+
+<section id="games-tab" class="tab-panel">
+  <div class="section-heading">
+    <h2>Games</h2>
+    <p>Search, sort, and compare tracked games in a compact table.</p>
+  </div>
+  <div class="table-toolbar">
+    <div class="search-bar">
+      <label for="game-search">Search games</label>
+      <input id="game-search" type="search" placeholder="Search by game name or org" />
+    </div>
+    <div class="table-controls">
+      <label>Show
+        <select id="game-table-metric">
+          <option value="Favourited">Favorites</option>
+          <option value="VotesUp">Likes</option>
+          <option value="VotesDown">Dislikes</option>
+          <option value="LikePercentage">Like %</option>
+          <option value="Created">Created</option>
+          <option value="TotalSize">Size</option>
+          <option value="ErrorRate">Error Rate</option>
+        </select>
+      </label>
+      <label>Sort by
+        <select id="game-table-sort">
+          <option value="Title">Name</option>
+          <option value="UsersNow" selected>Players</option>
+          <option value="Favourited">Favorites</option>
+          <option value="VotesUp">Likes</option>
+          <option value="VotesDown">Dislikes</option>
+          <option value="LikePercentage">Like %</option>
+          <option value="Created">Created</option>
+          <option value="TotalSize">Size</option>
+          <option value="ErrorRate">Error Rate</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table class="game-table">
+      <thead>
+        <tr>
+          <th>Game</th>
+          <th>Players</th>
+          <th id="metric-header">Favorites</th>
+        </tr>
+      </thead>
+      <tbody id="game-table-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="orgs-tab" class="tab-panel tab-hidden">
+  <div class="section-heading">
+    <h2>Organizations</h2>
+    <p>All of the tracked ORGs.</p>
+  </div>
+  <div class="grid-list">$org_list</div>
+</section>
+
+<script>
+window.homePageData = $home_page_data_json;
+window.gameTableData = $game_table_data_json;
+</script>

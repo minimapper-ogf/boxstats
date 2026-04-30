@@ -1,0 +1,54 @@
+<section class="detail-panel">
+  <div class="detail-summary">
+    <div class="preview-shell">
+      <img src="$preview_image" alt="$page_title preview" />
+    </div>
+    <div class="detail-copy">
+      <p class="eyebrow">$page_tag</p>
+      <h1>$page_title</h1>
+      <p class="detail-intro">$page_subtitle</p>
+      <div class="detail-links">
+        <a class="button" href="index.html">Back to Dashboard</a>
+        $action_button
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-body">
+    <div class="detail-description">$description_html</div>
+    <div class="detail-cards" id="stats-grid"></div>
+  </div>
+</section>
+
+$org_games_section
+
+<section class="charts-section">
+  <div class="section-heading">
+    <h2>Charts</h2>
+    <p>Data is updated every 10 minutes.</p>
+  </div>
+  <div class="chart-grid">
+    <article class="chart-card"><h3>Users</h3><div id="chart-users"></div></article>
+    <article class="chart-card"><h3>Favorites</h3><div id="chart-favourites"></div></article>
+    <article class="chart-card"><h3>Favorites Gain</h3><div id="chart-favourites-gain"></div></article>
+    <article class="chart-card"><h3>Collections</h3><div id="chart-collections"></div></article>
+    <article class="chart-card"><h3>Votes Up / Votes Down</h3><div id="chart-votes"></div></article>
+    <article class="chart-card"><h3>Vote Change</h3><div id="chart-vote-change"></div></article>
+    <article class="chart-card"><h3>Like %</h3><div id="chart-like-percent"></div></article>
+    <article class="chart-card"><h3>Total Users</h3><div id="chart-total-users"></div></article>
+    <article class="chart-card"><h3>Total Hours</h3><div id="chart-total-hours"></div></article>
+    <article class="chart-card"><h3>Visits</h3><div id="chart-visits"></div></article>
+    <article class="chart-card"><h3>Visits Change</h3><div id="chart-visits-change"></div></article>
+    <article class="chart-card"><h3>File Count</h3><div id="chart-file-count"></div></article>
+    <article class="chart-card"><h3>Total Size</h3><div id="chart-total-size"></div></article>
+    <article class="chart-card"><h3>Error Rate</h3><div id="chart-error-rate"></div></article>
+  </div>
+</section>
+
+<script>
+window.pageData = $page_data_json;
+window.pageDataRoot = {
+  home: "index.html",
+  org: "$org_url"
+};
+</script>

@@ -1,0 +1,23 @@
+<section class="detail-panel">
+  <div class="detail-summary">
+    <div class="detail-copy">
+      <p class="eyebrow">Add Organization</p>
+    </div>
+  </div>
+  <h1>Register a new org</h1>
+  <p class="detail-intro">Enter a new org identifier to add it to <code>the database</code>. The name can be found in a orgs URL such as the ORG Dxura has the url "https://sbox.game/dxura", just add dxura from the url and it should work :)</p>
+
+  <div class="detail-body">
+    <form id="add-org-form" class="add-org-form">
+      <label for="org-name">Org name</label>
+      <input id="org-name" name="org" type="text" required placeholder="e.g. facepunch" />
+      <div class="form-actions">
+        <button class="button" type="submit">Add org</button>
+      </div>
+      <div id="add-org-message" class="form-message"></div>
+    </form>
+  </div>
+</section>
+<script>
+window.addOrgPage = true;
+</script>
